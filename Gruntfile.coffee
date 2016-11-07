@@ -6,6 +6,7 @@ module.exports = (grunt) ->
     scripts_match = []
     clean =  (src,filepath) ->
         cleaned = src.replace(/(\r\n|\n|\r)/gm,"")
+        cleaned = cleaned.replace(/"/g, "'")
         matches = cleaned.match(/<script.*?>([\s\S]*?)<\/script>/gmi)
         if matches != null
             scripts_match.push elem2 for elem2 in matches
