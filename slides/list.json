@@ -1,9 +1,16 @@
 [
-    "start.html",
-    "ziele.html",
-    "was-ist-ml.html",
-    "wann-benutzt-man-ml.html",
-    "problemdefinition-1.html",
-    "problemdefinition-2.html",
-    "hansel.html"
+  "start.html",
+  "ziele.html",
+  "was-ist-ml.html",
+  "wann-benutzt-man-ml.html",
+  "problemdefinition-1.html",
+  "problemdefinition-2.html",
+  "problemdefinition-3.html",
+  "ueberwachtes_lernen.html",
+  "logistische_regression_1.html",
+  "logistische_regression_2.html",
+  "programm_code.html",
+  "inception.html",
+  "ausblick.html",
+  "hansel.html"
 ]

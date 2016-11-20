@@ -77,7 +77,21 @@
             progress: true,
             history: true,
             center: true,
-                transitionSpeed: 'slow', // default/fast/slow
+
+
+              slideNumber: true,
+
+
+              math: {
+                  mathjax: 'https://cdn.mathjax.org/mathjax/latest/MathJax.js',
+                  config: 'TeX-AMS_HTML-full'  // See http://docs.mathjax.org/en/latest/config-files.html
+              },
+
+
+
+
+
+              transitionSpeed: 'slow', // default/fast/slow
 
             transition: 'slide', // none/fade/slide/convex/concave/zoom
 
@@ -89,6 +103,7 @@
               { src: 'bower_components/reveal.js/plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( '[data-html]' ) || !!document.querySelector( 'pre code' ) || !!document.querySelector( '[data-markdown]' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
               { src: 'bower_components/reveal.js/plugin/zoom-js/zoom.js', async: true },
               { src: 'bower_components/reveal.js/plugin/notes/notes.js', async: true },
+                { src: 'plugin/math/math.js', async: true },
               { src: 'js/loadhtmlslides.js', condition: function() { return !!document.querySelector( '[data-html]' ); } }
             ]
           });
