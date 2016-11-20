@@ -108,7 +108,7 @@
                     
                         <section>
 
-<h2>Problemdefinition 3</h2><p> platzhalte: bild besteht aus pixln:bild -> matrix -> vector</p>
+<h2>Problemdefinition 3</h2><object type='image/svg+xml' data='/resources/Bild_matrix_vector.svg'> </object>
 
 </section>
                     
@@ -126,7 +126,7 @@
                     
                         <section>
 
-<h2>Logistische Regression 1</h2><object type='image/svg+xml' data='/resources/logistic.svg'></object>
+<h2>Logistische Regression 1</h2><object type='image/svg+xml' data='/resources/logistic_graphic.svg'></object>
 
 </section>
                     
@@ -135,7 +135,7 @@
                     
                         <section>
 
-<!DOCTYPE html><html lang='en'><head>    <meta charset='UTF-8'>    <title>Title</title></head><body></body></html>
+<h2>Logistische Regression 2</h2><object type='image/svg+xml' data='/resources/funktionen.svg'></object>
 
 </section>
                     
@@ -144,7 +144,7 @@
                     
                         <section>
 
-<h2>Programmcode & Anwendung</h2><pre> <code>    data = loadmat('ex3data1.mat')    data.keys()    weights = loadmat('ex3weights.mat')    weights.keys()    y = data['y']    # Add constant for intercept    X = np.c_[np.ones((data['X'].shape[0],1)), data['X']]    print('X: {} (with intercept)'.format(X.shape))    print('y: {}'.format(y.shape))    theta1, theta2 = weights['Theta1'], weights['Theta2']    def predict(weights,dataset):    if(len(weights.shape)==1):    weights = weights[:,np.newaxis]    #print('weights.shape=',weights.shape)    #print('dataset.shape=',dataset.shape)    prediction = scipy.special.expit(np.dot(dataset,weights))    return prediction    def cost(weights,dataset,labels,gamma=0.1):    if(len(weights.shape)==1):    weights = weights[:,np.newaxis]    regularizer = (gamma/(2*m))*np.sum(np.delete(labels,0,0))    prediction = predict(weights,dataset)    cost = -1/m * np.sum(np.dot(labels.T,np.log(prediction))+np.dot((1-labels).T,np.log(1-prediction))) +regularizer    #print(cost)    return cost    def one_hot_encoding(labels,class_nr):    new_labels = np.copy(labels)    np.place(new_labels,new_labels==class_nr,1)    np.place(new_labels,new_labels!=1,0)    return new_labels    def gradient(weights,dataset,labels,gamma=0.1):    if(len(weights.shape)==1):    weights = weights[:,np.newaxis]    regularizer = (gamma/m) * (np.insert(np.delete(theta,0,0),0,0,0))    prediction = predict(weights,dataset)    grad = 1/m*np.dot(X.T,(prediction-labels)) +regularizer    return np.ndarray.flatten(grad)    def minimize(weights,dataset,labels):    return scipy.optimize.minimize(cost,weights,method='TNC',jac=gradient,args=(dataset,labels),tol=0.000001,options={'disp': True})    def train(dataset,labels,class_nr):    new_labels = one_hot_encoding(labels,class_nr)    theta = np.zeros((dataset.shape[1],1))    return minimize(weights = theta,dataset=dataset,labels=new_labels)    train(X,y,1)</code></pre>
+<h2>Programmcode & Anwendung</h2><a  target='_blank' href='http://informatikpl.dnshome.de/notebook/tree/informatik/notebook'> Link zum Code</a>
 
 </section>
                     
@@ -153,7 +153,7 @@
                     
                         <section>
 
-<h2>Aktuelle Forschung</h2><p>link zu meiner website!</p>
+<h2>Aktuelle Forschung</h2><a target='_blank' href='http://informatikpl.dnshome.de/bilder'> Link zu meiner Inception Webseite </a>
 
 </section>
                     
@@ -199,7 +199,7 @@
 
               transitionSpeed: 'slow', // default/fast/slow
 
-            transition: 'slide', // none/fade/slide/convex/concave/zoom
+            transition: 'none', // none/fade/slide/convex/concave/zoom
 
             // Optional reveal.js plugins
             dependencies: [
